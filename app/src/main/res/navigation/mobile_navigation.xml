@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_first">
+
+    <fragment
+        android:id="@+id/nav_first"
+        android:name="com.example.lab3task5.FirstFragment"
+        android:label="First fragment" >
+        <action
+            android:id="@+id/first_to_second"
+            app:destination="@id/nav_second" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_second"
+        android:name="com.example.lab3task5.SecondFragment"
+        android:label="Second fragment" >
+        <action
+            android:id="@+id/second_to_third"
+            app:destination="@id/nav_third" />
+        <action
+            android:id="@+id/second_to_first"
+            app:destination="@id/nav_first" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_third"
+        android:name="com.example.lab3task5.ThirdFragment"
+        android:label="Third fragment" >
+        <action
+            android:id="@+id/third_to_second"
+            app:destination="@id/nav_second" />
+        <action
+            android:id="@+id/third_to_first"
+            app:destination="@id/nav_first"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <activity
+        android:id="@+id/nav_about"
+        android:name="com.example.lab3task5.AboutActivity"
+        android:label="@string/menu_about"
+        />
+</navigation>
