@@ -6,7 +6,7 @@
     <string name="nav_header_desc">Navigation header</string>
 
     <string name="menu_about">About</string>
-    <string name="text_about">This is second task</string>
+    <string name="text_about">This is third task</string>
     <string name="title_activity_second">SecondActivity</string>
     <string name="title_activity_third">ThirdActivity</string>
     <string name="bn_1">to first</string>

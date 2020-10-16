@@ -16,7 +16,7 @@ class ThirdActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_third)
-        val toolbar: Toolbar = findViewById(R.id.ttoolbar)
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
         val drawer: DrawerLayout = findViewById(R.id.tdrawer_layout)
@@ -30,17 +30,17 @@ class ThirdActivity : AppCompatActivity() {
         drawer.addDrawerListener(toggle)
         toggle.syncState()
 
-        val navView: NavigationView = findViewById(R.id.tnav_view)
+        val navView: NavigationView = findViewById(R.id.nav_view)
         navView.setNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.tnav_about -> {
+                R.id.nav_about -> {
                     val drawerL: DrawerLayout = findViewById(R.id.tdrawer_layout)
                     drawerL.closeDrawer(GravityCompat.START)
 
                     startActivity(Intent(this, AboutActivity::class.java))
                     true
                 }
-                R.id.tnav_first -> {
+                R.id.nav_first -> {
                     val drawerL: DrawerLayout = findViewById(R.id.tdrawer_layout)
                     drawerL.closeDrawer(GravityCompat.START)
 

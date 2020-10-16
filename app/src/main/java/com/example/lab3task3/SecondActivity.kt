@@ -16,7 +16,7 @@ class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
-        val toolbar: Toolbar = findViewById(R.id.stoolbar)
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
         val drawer: DrawerLayout = findViewById(R.id.sdrawer_layout)
@@ -30,17 +30,17 @@ class SecondActivity : AppCompatActivity() {
         drawer.addDrawerListener(toggle)
         toggle.syncState()
 
-        val navView: NavigationView = findViewById(R.id.snav_view)
+        val navView: NavigationView = findViewById(R.id.nav_view)
         navView.setNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.snav_about -> {
+                R.id.nav_about -> {
                     val drawerL: DrawerLayout = findViewById(R.id.sdrawer_layout)
                     drawerL.closeDrawer(GravityCompat.START)
 
                     startActivity(Intent(this, AboutActivity::class.java))
                     true
                 }
-                R.id.snav_first -> {
+                R.id.nav_first -> {
                     val drawerL: DrawerLayout = findViewById(R.id.sdrawer_layout)
                     drawerL.closeDrawer(GravityCompat.START)
 
