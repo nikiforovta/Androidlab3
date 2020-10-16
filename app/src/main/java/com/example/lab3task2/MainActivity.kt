@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val toolbar: Toolbar = findViewById(R.id.mtoolbar)
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
         val drawer: DrawerLayout = findViewById(R.id.mdrawer_layout)
@@ -29,10 +29,10 @@ class MainActivity : AppCompatActivity() {
         drawer.addDrawerListener(toggle)
         toggle.syncState()
 
-        val navView: NavigationView = findViewById(R.id.mnav_view)
+        val navView: NavigationView = findViewById(R.id.nav_view)
         navView.setNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.mnav_about -> {
+                R.id.nav_about -> {
                     val drawerL: DrawerLayout = findViewById(R.id.mdrawer_layout)
                     drawerL.closeDrawer(GravityCompat.START)
 
